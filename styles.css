@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-headings: hsl(292, 42%, 14%);
+    --clr-text: hsl(292, 16%, 49%);
+    --clr-divider: hsl(275, 100%, 97%);
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-primary: hsl(284, 81%, 61%);
+
+    --ff-base: "Work Sans", sans-serif;
+    --fs-text: 1rem;
+    --fs-title: 3rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat center top fixed;
+    background-color: var(--clr-divider);
+    font-family: var(--ff-base);
+    color: var(--clr-text);
+    background-size: 200vh auto;
+    background-position: center top;
+}
+
+.faq {
+    background-color: var(--clr-white);
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+    .faq {
+        width: auto;
+        margin: auto 2rem;
+    }
+}
+
+.faq__header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.faq__header-title {
+    color: var(--clr-headings);
+    font-weight: 700;
+    font-size: var(--fs-title);
+}
+
+.faq__item-title {
+    font-weight: 600;
+    font-size: var(--fs-text);
+}
+
+.faq__question {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    color: var(--clr-headings);
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: var(--fs-text);
+    transition: color 0.3s ease;
+}
+
+.faq__question:hover {
+    color: var(--clr-primary);
+    
+}
+
+.faq__icon {
+    transition: transform 0.3s ease;
+    user-select: none;
+}
+
+.faq__answer {
+    font-weight: 400;
+    font-size: var(--fs-text);
+    color: var(--clr-text);
+    line-height: 1.5;
+    margin-top: 0.75rem;
+}
+
+.faq__divider {
+    color: var(--clr-divider);
+    opacity: 10%;
+    margin: 1rem;
+}
+
+.attribution {
+    color: var(--clr-headings);
+    font-size: .875rem;
+    margin-bottom: 1rem;
+}
+
+.attribution a {
+    color: var(--clr-primary);
+    text-decoration: underline transparent;
+    transition: text-decoration 0.5s ease;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-primary);
+}
